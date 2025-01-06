@@ -2,7 +2,7 @@ resource "aws_instance" "myweb12" {
   ami             = "ami-0fff1b9a61dec8a5f"
   instance_type   = "t2.micro"
   key_name        = "terraform-key"
-  security_groups = ["new-sg-tf"]
+  security_groups = ["new-securitygroup-for-terraform"]
   tags = {
     Name = "HR"
   }
