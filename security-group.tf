@@ -1,4 +1,5 @@
- name        = "new-securitygroup-for-terraform"
+resource "aws_security_group" "terra-sg" {
+name        = "new-securitygroup-for-terraform"
   description = "allow ssh & http"
 
   ingress {
