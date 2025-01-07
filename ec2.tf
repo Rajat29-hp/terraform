@@ -3,6 +3,15 @@ resource "aws_instance" "myweb12" {
   instance_type   = "t2.micro"
   key_name        = "terraform-key"
   security_groups = ["new-securitygroup-for-terraform"]
+
+  user_data = <<-EOF
+  #!/bin/bash
+  sudo yum update -y
+  sudo yum install httpd -y
+  sudo systemctl enable --now httpd.service
+  sudo echo "<h1>This is web page for $(hostname -f). This web page deployed via Terraform</h1>" > /var/www/html/index.html
+EOF
+
   tags = {
     Name = "HR"
   }
