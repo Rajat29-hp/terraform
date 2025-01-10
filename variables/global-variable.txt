@@ -1,0 +1,2 @@
+# User can set vairable value globally 
+ export TF_VAR_cpu = t2.small
