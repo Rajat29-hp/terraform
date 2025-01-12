@@ -1,0 +1,10 @@
+# terraform has detailed logs which can enable by TF_log variable
+
+#-------------------------------
+
+ # vim /root/.bashrc
+
+export TF_LOG = TRACE
+export TF_LOG_PATH = "/home/terraform. txt"
+
+ # source /root/.bashrc
