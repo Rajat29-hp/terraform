@@ -1,6 +1,10 @@
-resource "aws_s3_bucket" "firstS3"{
-  bucket = "My bucket "
-  tags={
-  name = "my_bucket"
-  }
+
+
+module "my_s3_module"{
+source = "/s3_moudule"
 }
+
+module "my_ec2_module"{
+source = "/ec2_moudule"
+}
+
